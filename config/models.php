@@ -11,6 +11,8 @@ return [
     'User' => 'App\\Models\\User',
     'Subject' => 'App\\Models\\Subject',
     'Rankings' => 'App\\Models\\Rankings',
+    'ClassReservation' => 'App\\Models\\ClassReservation',
+    'CourtsReservation' => 'App\\Models\\CourtReservation',
     'Mainmodels' => [
         "contacts" => 'App\\Models\\Contact',
         "customers" => 'App\\Models\\Customer',
@@ -23,6 +25,8 @@ return [
         'users' => 'App\\Models\\User',
         'subject' => 'App\\Models\\Subject',
         'rankings' => 'App\\Models\\Rankings',
+        'classreservation' => 'App\\Models\\ClassReservation',
+        'courtsreservation' => 'App\\Models\\CourtReservation',
     ],
     'EndpointName' => [
         "contacts" => "contact_id",
@@ -33,6 +37,8 @@ return [
         "users" => "id_user",
         "subject" => "id_subject",
         'rankings' => 'id_ranking',
+        'classreservation' => 'id_reservation',
+        'courtsreservation' => 'id_court_reservation',
     ],
     'Mainfields' => [
         "contacts" => [
@@ -85,6 +91,26 @@ return [
         ],
         "rankings" => [
             "player_name"
+        ],
+        "classreservation" => [
+            "id_reservation",
+            "id_classtype",
+            "class_type",
+            "id_schedulemat",
+            "schedule_mat",
+            "id_schedulevesp",
+            "schedule_vesp",
+            "id_user",
+            "username"
+        ],
+        "courtsreservation" => [
+            "id_court_reservation",
+            "id_court",
+            "court_name",
+            "date_reservation",
+            "hour_reservation",
+            "id_user",
+            "username"
         ]
     ],
     'RelationsModels' => [
@@ -99,6 +125,8 @@ return [
         "users" => [],
         "subject" => [],
         "rankings" => [],
+        "classreservation" => [],
+        "courtsreservation" => [],
     ],
     'Validations' => [
         "users" => [
@@ -110,5 +138,7 @@ return [
         "contacts" => [],
         "subject" => [],
         "rankings" => [],
+        "classreservation" => [],
+        "courtsreservation" => [],
     ]
 ];
