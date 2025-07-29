@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('errors.main');
 });
 
 Route::namespace('Ws')->prefix('ws')->group(function(){
