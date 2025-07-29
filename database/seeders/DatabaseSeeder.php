@@ -16,12 +16,7 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         $this->call([
-            CheckoutmemberSeeder::class,
             CourtSeeder::class,
-            EventPhotoSeeder::class,
-            EventSeeder::class,
-            MemberCardSeeder::class,
-            MemberSeeder::class,
             ReservationSeeder::class,
             ScheduleSeeder::class,
             UserSeeder::class,
@@ -29,7 +24,6 @@ class DatabaseSeeder extends Seeder
             CourtReservationSeeder::class,
             RankingsSeeder::class,
             ReservationSeeder::class,
-            ScheduleSeeder::class,
             SubjectSeeder::class,
             User::class
         ]);
