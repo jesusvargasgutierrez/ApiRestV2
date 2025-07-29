@@ -24,7 +24,14 @@ class DatabaseSeeder extends Seeder
             MemberSeeder::class,
             ReservationSeeder::class,
             ScheduleSeeder::class,
-            UserSeeder::class
+            UserSeeder::class,
+            ClassReservationSeeder::class,
+            CourtReservationSeeder::class,
+            RankingsSeeder::class,
+            ReservationSeeder::class,
+            ScheduleSeeder::class,
+            SubjectSeeder::class,
+            User::class
         ]);
     }
 }

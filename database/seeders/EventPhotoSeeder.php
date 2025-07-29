@@ -14,6 +14,6 @@ class EventPhotoSeeder extends Seeder
      */
     public function run()
     {
-        eventphoto::factory(500)->create();
+        eventphoto::factory(20)->create();
     }
 }

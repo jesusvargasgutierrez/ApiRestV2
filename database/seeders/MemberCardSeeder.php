@@ -14,6 +14,6 @@ class MemberCardSeeder extends Seeder
      */
     public function run()
     {
-        membercard::factory(500)->create();
+        membercard::factory(20)->create();
     }
 }

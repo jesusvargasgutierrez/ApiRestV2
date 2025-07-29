@@ -14,6 +14,6 @@ class CheckoutmemberSeeder extends Seeder
      */
     public function run()
     {
-        checkoutmember::factory(500)->create();
+        checkoutmember::factory(20)->create();
     }
 }
