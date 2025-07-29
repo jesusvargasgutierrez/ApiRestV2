@@ -40,17 +40,34 @@ class ApiController extends Controller
     }
 
     function getrecordwhere(Request $req){
+        $methodvalidate = new Methods();
         $jsonwhere = $req->where;
 
         //$arraywhere = array_merge(...$jsonwhere);
 
         //dd($arraywhere);
 
-        $arraywhere = json_decode($jsonwhere, true)[0];
+        $arraywhere = json_decode($jsonwhere, true);
+        $values = '';
+
+        $where = collect($arraywhere)
+                ->map(function ($item) {
+                    $campo = array_key_first($item);
+                    if($campo == "password"){
+                        //dd($campo.' '.$item[$campo]);
+                        $values = sha1($item[$campo]);
+                    }else{
+                        $values = $item[$campo];
+                    }
+                    $valor = $values;
+                    return [$campo, '=', $valor];
+                })
+                ->values()
+                ->toArray();
 
         $pivotcolumn = config('models.EndpointName')[$req->get("EndpointName")];
 
-        $record = config('models.Mainmodels')[$req->get("EndpointName")]::where($arraywhere)
+        $record = config('models.Mainmodels')[$req->get("EndpointName")]::where($where)
                   ->get()->toArray();
 
         $record = array("information" => $record);

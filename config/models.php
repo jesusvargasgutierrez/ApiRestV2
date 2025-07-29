@@ -55,6 +55,7 @@ return [
             "password",
             "fname",
             "lname",
+            "username",
             "company",
             "email",
             "country",
