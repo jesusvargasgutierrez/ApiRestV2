@@ -8,7 +8,7 @@
 <meta name="robots" content="NOINDEX,  NOFOLLOW"/>
 <meta name="googlebot" content="NOINDEX, NOFOLLOW"/>
 
-<link rel="icon" type="image/png" href="{{ asset('assets/media/favicon.png') }}" />
+<link rel="icon" type="image/png" href="#" />
 <title>404</title>
 
 <!-- Css Files -->
