@@ -128,6 +128,7 @@ return [
         "rankings" => [],
         "classreservation" => [],
         "courtsreservation" => [],
+        "customers" => [],
     ],
     'Validations' => [
         "users" => [
@@ -141,5 +142,6 @@ return [
         "rankings" => [],
         "classreservation" => [],
         "courtsreservation" => [],
+        "customers" => [],
     ]
 ];
