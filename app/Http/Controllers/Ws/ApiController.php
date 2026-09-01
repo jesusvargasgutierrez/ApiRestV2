@@ -5,6 +5,7 @@ use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\AdminRequest;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Traits\Validation\{ Methods };
 //use App\Http\Requests\CartRequest;
 use App\Models\{ Contact, MailContact, PhoneContact, AddressContact };
@@ -108,6 +109,12 @@ class ApiController extends Controller
                     $mainfields[$value] = $methodvalidate->rnvaluevalidated($field,$req->get($value));
                 }
             }
+        }
+
+        if($req->get("EndpointName") == "images"){
+            $base64 = $req->get("baseimage");
+
+            $methodvalidate->saveimage($base64,$mainfields["image_name"]);
         }
 
         $mainmodel = $modelname::create($mainfields);

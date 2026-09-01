@@ -13,6 +13,7 @@ return [
     'Rankings' => 'App\\Models\\Rankings',
     'ClassReservation' => 'App\\Models\\ClassReservation',
     'CourtsReservation' => 'App\\Models\\CourtReservation',
+    'Images' => 'App\\Models\\Images',
     'Mainmodels' => [
         "contacts" => 'App\\Models\\Contact',
         "customers" => 'App\\Models\\Customer',
@@ -27,6 +28,7 @@ return [
         'rankings' => 'App\\Models\\Rankings',
         'classreservation' => 'App\\Models\\ClassReservation',
         'courtsreservation' => 'App\\Models\\CourtReservation',
+        'images' => 'App\\Models\\Images',
     ],
     'EndpointName' => [
         "contacts" => "contact_id",
@@ -39,6 +41,7 @@ return [
         'rankings' => 'id_ranking',
         'classreservation' => 'id_reservation',
         'courtsreservation' => 'id_court_reservation',
+        'images' => 'id_image',
     ],
     'Mainfields' => [
         "contacts" => [
@@ -112,6 +115,14 @@ return [
             "hour_reservation",
             "id_user",
             "username"
+        ],
+        "images" => [
+            "description",
+            "image_name",
+            "id_origin",
+            "id_module",
+            "url",
+            "route_url"
         ]
     ],
     'RelationsModels' => [
@@ -129,6 +140,7 @@ return [
         "classreservation" => [],
         "courtsreservation" => [],
         "customers" => [],
+        "images" => [],
     ],
     'Validations' => [
         "users" => [
@@ -143,5 +155,6 @@ return [
         "classreservation" => [],
         "courtsreservation" => [],
         "customers" => [],
+        "images" => [],
     ]
 ];
